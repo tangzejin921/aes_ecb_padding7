@@ -2,6 +2,7 @@
 
 #include <string.h>
 #include "../h/pkcs7padding.h"
+#include "../h/config.h"
 
 
 /*
@@ -30,6 +31,8 @@ char* PKCS7Padding(ListP list){
 
 void PKCS7UnPadding(ListP list){
 	int unpadding = *(list->p + (list->lenth - 1));
-	list->p[list->lenth - unpadding] = '\0';
-	list->lenth = list->lenth - unpadding;
+	if (unpadding >= 0 && unpadding <= KEY_LENGTH){
+		list->p[list->lenth - unpadding] = '\0';
+		list->lenth = list->lenth - unpadding;
+	}
 }

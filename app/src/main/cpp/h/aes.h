@@ -6,9 +6,6 @@
 #ifndef __AES_H_
 #define __AES_H_
 
-//#define _KEY_LENGTH 16;
-static const int KEY_LENGTH = 16;
-
 typedef struct {
 	int lenth;
 	unsigned char* p;

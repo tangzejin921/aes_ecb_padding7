@@ -7,6 +7,7 @@
 // http://en.wikipedia.org/wiki/Rijndael_S-box
 // This code is public domain, or any OSI-approved license, your choice. No warranty.
 #include "../h/aes.h"
+#include "../h/config.h"
 #include <string.h> // memcpy()
 
 

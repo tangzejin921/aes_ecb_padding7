@@ -3,7 +3,6 @@
 #include "h/pkcs7padding.h"
 #include "h/ecb.h"
 #include "h/b64.h"
-#include "h/aes.h"
 
 extern "C"
 JNIEXPORT jbyteArray JNICALL
@@ -58,7 +57,6 @@ JNIEXPORT jbyteArray JNICALL
 Java_com_jkwy_libs_aes_UtilAes_decode(JNIEnv *env, jclass type, jstring jstr) {
 
     const char *str = env->GetStringUTFChars(jstr, 0);
-
     List list = {strlen(str), (unsigned char *) str};
     ListP lp = &list;
 

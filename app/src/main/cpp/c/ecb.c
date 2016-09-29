@@ -1,6 +1,5 @@
 #include "../h/ecb.h"
-
-unsigned char* KEY = "0123456789abcdef";//这里是密码长度16位
+#include "../h/config.h"
 
 void ECB_Decrypt(ListP list) {
 	int count = list->lenth / KEY_LENGTH;
